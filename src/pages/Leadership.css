@@ -1,0 +1,38 @@
+.leadership__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.officer-card {
+  background: var(--surface);
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.officer-card__avatar {
+  width: 48px;
+  height: 48px;
+  background: #2a0000;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.officer-card__name {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.officer-card__role {
+  color: var(--red);
+  font-size: 11px;
+  margin-top: 3px;
+}
