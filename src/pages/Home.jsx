@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Badge } from 'react-bootstrap'
 import { events } from '../data/events'
 import './Home.css'
 
@@ -27,7 +28,7 @@ export default function Home() {
     <div className="page">
       {/* Hero */}
       <section className="home__hero">
-        <div className="red-tag">Music Industry for Madison Students</div>
+        <Badge bg="danger" className="red-tag">Music Industry for Madison Students</Badge>
         <h1>Connect. Learn. Grow.</h1>
         <p>The home for music industry students at UW–Madison. Network with professionals, attend exclusive events, and launch your career.</p>
         <div className="home__hero-buttons">
@@ -38,7 +39,7 @@ export default function Home() {
 
       {/* Community */}
       <section className="home__community">
-        <div className="red-tag" style={{ marginBottom: '12px' }}>Join the Community</div>
+        <Badge bg="danger" className="red-tag" style={{ marginBottom: '12px' }}>Join the Community</Badge>
         <div className="home__social-buttons">
           <a href="#" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--discord">
             <DiscordIcon /> Join Discord

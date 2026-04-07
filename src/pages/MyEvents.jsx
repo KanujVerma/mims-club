@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
+import { Badge } from 'react-bootstrap'
 import './MyEvents.css'
 
 export default function MyEvents() {
   return (
     <div className="page">
-      <div className="red-tag">Your Schedule</div>
+      <Badge bg="danger" className="red-tag">Your Schedule</Badge>
       <h1 className="page-title">My Events</h1>
       <p className="page-subtitle">Events you've RSVP'd to. Saved locally in your browser.</p>
       <hr className="divider" />

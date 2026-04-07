@@ -1,3 +1,4 @@
+import { Badge } from 'react-bootstrap'
 import './About.css'
 
 const whatWeDo = [
@@ -10,7 +11,7 @@ const whatWeDo = [
 export default function About() {
   return (
     <div className="page">
-      <div className="red-tag">Who We Are</div>
+      <Badge bg="danger" className="red-tag">Who We Are</Badge>
       <h1 className="page-title">About MIMS</h1>
       <hr className="divider" />
 
