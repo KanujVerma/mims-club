@@ -39,6 +39,4 @@
   border-color: var(--border);
 }
 
-.mims-navbar .navbar-toggler-icon {
-  filter: invert(1);
-}
+/* data-bs-theme="dark" already renders the icon white — no invert needed */
