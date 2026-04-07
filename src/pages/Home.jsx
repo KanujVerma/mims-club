@@ -32,8 +32,8 @@ export default function Home() {
         <h1>Connect. Learn. Grow.</h1>
         <p>The home for music industry students at UW–Madison. Network with professionals, attend exclusive events, and launch your career.</p>
         <div className="home__hero-buttons">
-          <Button as={Link} to="/events" variant="outline-danger" size="sm">Explore Events →</Button>
-          <Button as={Link} to="/about" variant="outline-secondary" size="sm">About MIMS</Button>
+          <Button as={Link} to="/events" variant="outline-danger" className="btn-mims btn-mims--primary">Explore Events →</Button>
+          <Button as={Link} to="/about" variant="outline-secondary" className="btn-mims btn-mims--ghost">About MIMS</Button>
         </div>
       </section>
 
@@ -41,13 +41,13 @@ export default function Home() {
       <section className="home__community">
         <Badge bg="danger" className="red-tag" style={{ marginBottom: '12px' }}>Join the Community</Badge>
         <div className="home__social-buttons">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--discord">
+          <a href="https://discord.gg/MWrqSXGcp5" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--discord">
             <DiscordIcon /> Join Discord
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--groupme">
+          <a href="https://groupme.com/join_group/110594746/LTZYss4T" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--groupme">
             <GroupMeIcon /> Join GroupMe
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--instagram">
+          <a href="https://www.instagram.com/musicindustry4madisonstudents/" target="_blank" rel="noopener noreferrer" className="social-btn social-btn--instagram">
             <InstagramIcon /> Follow Instagram
           </a>
         </div>
@@ -63,7 +63,7 @@ export default function Home() {
               <div className="home__event-name">{event.title}</div>
               <div className="home__event-meta">{event.location} · {event.time}</div>
             </div>
-            <Button as={Link} to="/events" variant="outline-danger" size="sm">View →</Button>
+            <Button as={Link} to="/events" variant="outline-danger" size="sm" className="btn-mims btn-mims--primary">View →</Button>
           </div>
         ))}
       </section>
