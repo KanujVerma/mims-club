@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Badge } from 'react-bootstrap'
+import { Badge, Button } from 'react-bootstrap'
 import './MyEvents.css'
 
 export default function MyEvents() {
@@ -15,7 +15,7 @@ export default function MyEvents() {
         <div className="my-events__empty-icon">🎵</div>
         <h2>No events yet</h2>
         <p>Head to the Events page and RSVP to something!</p>
-        <Link to="/events" className="btn-red">Browse Events →</Link>
+        <Button as={Link} to="/events" variant="outline-danger" size="sm">Browse Events →</Button>
       </div>
     </div>
   )

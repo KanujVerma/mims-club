@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Badge } from 'react-bootstrap'
+import { Badge, Button } from 'react-bootstrap'
 import { events } from '../data/events'
 import './Home.css'
 
@@ -32,8 +32,8 @@ export default function Home() {
         <h1>Connect. Learn. Grow.</h1>
         <p>The home for music industry students at UW–Madison. Network with professionals, attend exclusive events, and launch your career.</p>
         <div className="home__hero-buttons">
-          <Link to="/events" className="btn-red">Explore Events →</Link>
-          <Link to="/about" className="btn-ghost">About MIMS</Link>
+          <Button as={Link} to="/events" variant="outline-danger" size="sm">Explore Events →</Button>
+          <Button as={Link} to="/about" variant="outline-secondary" size="sm">About MIMS</Button>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function Home() {
               <div className="home__event-name">{event.title}</div>
               <div className="home__event-meta">{event.location} · {event.time}</div>
             </div>
-            <Link to="/events" className="btn-red">View →</Link>
+            <Button as={Link} to="/events" variant="outline-danger" size="sm">View →</Button>
           </div>
         ))}
       </section>
