@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap'
 import FeedbackMessage from './FeedbackMessage'
 import './EventCard.css'
 
-export default function EventCard({ event, isRsvpd, onRSVP, onUnRSVP }) {
+export default function EventCard({ event, isRsvpd, onRSVP = () => {}, onUnRSVP = () => {} }) {
   const [showFeedback, setShowFeedback] = useState(false)
   const [hovered, setHovered] = useState(false)
 
