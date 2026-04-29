@@ -186,11 +186,7 @@ git commit -m "feat: update color tokens for WCAG AA and add Inter font"
 
 - [ ] **Step 1: Read Leadership.jsx to understand current officer card structure**
 
-```bash
-cat src/components/Navbar.jsx  # skip — already read
-```
-
-Look at `src/pages/Leadership.jsx` — the officer card is currently an inline `<div className="officer-card">` inside the map. Extract this exactly.
+Read `src/pages/Leadership.jsx` — the officer card is currently an inline `<div className="officer-card">` inside the map. Extract this structure exactly into the new component.
 
 - [ ] **Step 2: Create `src/components/OfficerCard.jsx`**
 
