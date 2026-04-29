@@ -1,5 +1,6 @@
 import { Badge } from 'react-bootstrap'
 import { officers } from '../data/officers'
+import OfficerCard from '../components/OfficerCard'
 import './Leadership.css'
 
 export default function Leadership() {
@@ -12,11 +13,7 @@ export default function Leadership() {
       <div className="section-heading">Executive Board</div>
       <div className="leadership__grid">
         {officers.map(officer => (
-          <div key={officer.id} className="officer-card">
-            <div className="officer-card__avatar">{officer.initials}</div>
-            <div className="officer-card__name">{officer.name}</div>
-            <div className="officer-card__role">{officer.role}</div>
-          </div>
+          <OfficerCard key={officer.id} officer={officer} />
         ))}
       </div>
     </div>

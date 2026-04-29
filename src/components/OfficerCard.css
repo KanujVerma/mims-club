@@ -1,0 +1,44 @@
+.officer-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  padding: 24px 16px;
+  text-align: center;
+  border-radius: 4px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.officer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.officer-card__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #1a0000;
+  border: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  color: var(--red-text);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.officer-card__name {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.officer-card__role {
+  color: var(--red-text);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
