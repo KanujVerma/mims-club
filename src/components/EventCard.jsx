@@ -7,6 +7,7 @@ import './EventCard.css'
 export default function EventCard({ event, isRsvpd, onRSVP = () => {}, onUnRSVP = () => {} }) {
   const [showFeedback, setShowFeedback] = useState(false)
   const [hovered, setHovered] = useState(false)
+  const [rsvpAnimKey, setRsvpAnimKey] = useState(0)
   const prefersReduced = useReducedMotion()
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function EventCard({ event, isRsvpd, onRSVP = () => {}, onUnRSVP 
   function handleRSVP() {
     onRSVP(event.id)
     setShowFeedback(true)
+    setRsvpAnimKey(k => k + 1)
   }
 
   function handleUnRSVP() {
@@ -43,16 +45,24 @@ export default function EventCard({ event, isRsvpd, onRSVP = () => {}, onUnRSVP 
             <Card.Text className="event-card__desc">{event.description}</Card.Text>
             <FeedbackMessage visible={showFeedback} />
           </div>
-          <Button
-            variant={isRsvpd ? 'danger' : 'outline-danger'}
-            size="sm"
-            className="event-card__rsvp"
-            onClick={isRsvpd ? handleUnRSVP : handleRSVP}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+          <motion.div
+            key={rsvpAnimKey}
+            className="event-card__rsvp-wrapper"
+            whileTap={prefersReduced ? {} : { scale: 0.93 }}
+            animate={prefersReduced ? {} : { scale: [1, 1.08, 1] }}
+            transition={{ type: 'spring', stiffness: 400, damping: 15, duration: 0.2 }}
           >
-            {buttonLabel}
-          </Button>
+            <Button
+              variant={isRsvpd ? 'danger' : 'outline-danger'}
+              size="sm"
+              className="event-card__rsvp"
+              onClick={isRsvpd ? handleUnRSVP : handleRSVP}
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
+              {buttonLabel}
+            </Button>
+          </motion.div>
         </Card.Body>
       </Card>
     </motion.div>

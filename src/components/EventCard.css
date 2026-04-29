@@ -52,8 +52,11 @@
   margin-bottom: 0 !important;
 }
 
-.event-card__rsvp {
+.event-card__rsvp-wrapper {
   flex-shrink: 0;
+}
+
+.event-card__rsvp {
   font-size: 11px !important;
   font-weight: 700 !important;
   letter-spacing: 0.5px;
