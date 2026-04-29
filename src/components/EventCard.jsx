@@ -31,7 +31,7 @@ export default function EventCard({ event, isRsvpd, onRSVP = () => {}, onUnRSVP 
       <Card.Body>
         <div className="event-card__date">{event.date}</div>
         <div className="event-card__content">
-          <Card.Title className="event-card__title">{event.title}</Card.Title>
+          <Card.Title as="div" className="event-card__title">{event.title}</Card.Title>
           <Card.Subtitle className="event-card__meta">
             📍 {event.location} · {event.time}
           </Card.Subtitle>
