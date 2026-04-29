@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Badge, Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import { events } from '../data/events'
+import PageHeader from '../components/PageHeader'
 import MyEventRow from '../components/MyEventRow'
 import './MyEvents.css'
 
@@ -9,10 +10,7 @@ export default function MyEvents({ rsvpIds = [], onUnRSVP }) {
 
   return (
     <div className="page">
-      <Badge bg="danger" className="red-tag">Your Schedule</Badge>
-      <h1 className="page-title">My Events</h1>
-      <p className="page-subtitle">Events you've RSVP'd to. Saved locally in your browser.</p>
-      <hr className="divider" />
+      <PageHeader tag="Your Schedule" title="My Events" subtitle="Events you've RSVP'd to. Saved locally in your browser." />
 
       {rsvpdEvents.length > 0 ? (
         <>
