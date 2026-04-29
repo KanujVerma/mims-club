@@ -2,12 +2,14 @@
 :root {
   --bg: #0d0d0d;
   --surface: #1a1a1a;
-  --border: #1f1f1f;
+  --surface-raised: #161616;
+  --border: #252525;
   --red: #cc0000;
-  --red-hover: #ff1a1a;
+  --red-text: #ff3333;
+  --red-hover: #ff4444;
   --text-primary: #ffffff;
-  --text-secondary: #777777;
-  --text-muted: #555555;
+  --text-secondary: #aaaaaa;
+  --text-muted: #888888;
 }
 
 /* ── Bootstrap Overrides ── */
@@ -19,9 +21,21 @@
   --bs-primary-rgb: 204, 0, 0;
   --bs-body-bg: #0d0d0d;
   --bs-body-color: #ffffff;
-  --bs-card-bg: #1a1a1a;
-  --bs-card-border-color: #1f1f1f;
-  --bs-border-color: #1f1f1f;
+  --bs-card-bg: #161616;
+  --bs-card-border-color: #252525;
+  --bs-border-color: #252525;
+}
+
+/* ── WCAG AA: red text on dark must use --red-text not --red ── */
+.btn-outline-danger {
+  color: var(--red-text) !important;
+  border-color: var(--red-text) !important;
+}
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #ffffff !important;
 }
 
 /* ── Reset ── */
@@ -34,7 +48,7 @@
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   min-height: 100vh;
