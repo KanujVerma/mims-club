@@ -11,36 +11,48 @@
 
 .mims-navbar__logo {
   color: var(--text-primary) !important;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* Nav links */
 .mims-navbar .nav-link {
   color: var(--text-muted) !important;
   font-size: 12px;
-  padding-bottom: 2px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 8px 12px !important;
+  transition: color 0.15s ease;
 }
 
 .mims-navbar .nav-link:hover {
   color: var(--text-secondary) !important;
 }
 
-/* React Router sets .active on NavLink when route matches */
+/* Active route — uses --red-text for WCAG AA contrast (#ff3333 on #0d0d0d = 4.88:1) */
 .mims-navbar .nav-link.active {
-  color: var(--red) !important;
-  border-bottom: 1px solid var(--red);
+  color: var(--red-text) !important;
+  border-bottom: 1px solid var(--red-text);
 }
 
-/* Bootstrap mobile toggle button */
+/* Keyboard focus rings — all interactive nav elements */
+.mims-navbar .nav-link:focus-visible,
+.mims-navbar__logo:focus-visible,
+.mims-navbar .navbar-toggler:focus-visible {
+  outline: 2px solid var(--red-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Mobile toggle */
 .mims-navbar .navbar-toggler {
   border-color: var(--border);
 }
 
-/* data-bs-theme="dark" already renders the icon white — no invert needed */
-
+/* RSVP count badge */
 .navbar__badge {
   display: inline-block;
   background: var(--red);
